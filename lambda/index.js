@@ -11,8 +11,8 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const random = Math.floor(Math.random() * 4) + 1;
-        const file = "Media/michael"+random+".mp3";
+        const random = Math.floor(Math.random() * 2) + 1;
+        const file = "Media/v2michael"+random+".mp3";
         
         const audioUrl = Util.getS3PreSignedUrl(file).replace(/&/g, '&amp;');
 
